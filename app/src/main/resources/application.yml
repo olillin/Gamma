@@ -81,3 +81,10 @@ application:
 gamma:
   dev-services:
     enabled: "${DEV_SERVICES_ENABLED:false}"
+springdoc:
+  swagger-ui:
+    enabled: true
+    path: "/docs"
+  api-docs:
+    enabled: true
+    path: "/openapi/v3"

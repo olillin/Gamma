@@ -21,6 +21,9 @@ dependencies {
     annotationProcessor(
             // Used to generate Record Builder classes
             "io.soabase.record-builder:record-builder-processor:53",
+
+            // Used to generate API docs from Javadoc
+            "com.github.therapi:therapi-runtime-javadoc-scribe:0.15.0",
     )
 
     implementation(
@@ -43,6 +46,10 @@ dependencies {
 
             // Redis
             "org.springframework.data:spring-data-redis",
+
+            // API docs
+            "org.springdoc:springdoc-openapi-starter-webmvc-ui:3.2.1",
+            "com.github.therapi:therapi-runtime-javadoc:0.15.0",
     )
 
     compileOnly(
