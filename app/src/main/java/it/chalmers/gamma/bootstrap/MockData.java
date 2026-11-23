@@ -49,6 +49,11 @@ public record MockData(
       Boolean admin) {}
 
   /**
+   * token is the raw value, it is encoded when the API key is created.
+   */
+  public record MockApiKey(UUID id, String token, String prettyName, MockText description, ApiKeyType type, MockApiKeySettings settings) {}
+
+  /**
    * A client is official if ownerId is null, otherwise it is owned by the user with that id.
    * clientSecret and apiKey.token are the raw values, they are encoded when the client is created.
    */
@@ -61,10 +66,10 @@ public record MockData(
       MockText description,
       boolean emailScope,
       UUID ownerId,
-      MockApiKey apiKey,
+      MockClientApiKey apiKey,
       List<MockClientAuthority> authorities) {}
 
-  public record MockApiKey(UUID id, String token) {}
+  public record MockClientApiKey(UUID id, String token) {}
 
   public record MockClientAuthority(
       String name,
